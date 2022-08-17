@@ -2,6 +2,7 @@
     background-color: mediumspringgreen;
     display: flex;
     width: 250px;
+    margin: 10px;
 }
 
 .answer img {
@@ -23,10 +24,10 @@
 }
 
 .message {
-color: aquamarine;
+    color: aquamarine;
 }
 
 .time {
-color: darkblue;
+    color: darkblue;
     text-align: right;
 }
