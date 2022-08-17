@@ -1,0 +1,32 @@
+.answer {
+    background-color: mediumspringgreen;
+    display: flex;
+    width: 250px;
+}
+
+.answer img {
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.textarea {
+    background-color: darkslategray;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.name {
+    color: mediumorchid;
+}
+
+.message {
+color: aquamarine;
+}
+
+.time {
+color: darkblue;
+    text-align: right;
+}
