@@ -8,6 +8,7 @@ function Message(props: messageDataPropsType) {
             <div>
                 <img src={props.avatar}/>
             </div>
+            <div className={s.triangle}></div>
             <div className={s.textarea}>
                 <div className={s.name}>
                     {props.name}
