@@ -3,6 +3,7 @@
     background-color: mediumspringgreen;
     width: 250px;
     margin: 10px;
+    padding: 5px;
 }
 
 .triangle {
@@ -10,20 +11,23 @@
     height: 0;
     border-bottom: 10px solid darkslategray;
     border-left: 10px solid transparent;
-    margin-top: 68px;
+    align-self: end;
+}
+
+.avatar {
+    align-self: flex-end;
 }
 
 .answer img {
     width: 30px;
     border-radius: 50%;
-    margin: 40px 5px 5px 5px;
+    margin: 5px;
 }
 
 .textarea {
     background-color: darkslategray;
-    margin: 5px 5px 5px 0px;
     padding: 5px;
-    border-radius: 5px 5px 5px 0px;
+    border-radius: 5px 5px 5px 0;
     width: 180px;
 }
 

@@ -5,10 +5,12 @@ import s from "./Message.module.css"
 function Message(props: messageDataPropsType) {
     return (
         <div className={s.answer}>
-            <div>
-                <img src={props.avatar}/>
+            <div className={s.avatar}>
+                <img src={props.avatar} alt={''}/>
             </div>
+
             <div className={s.triangle}></div>
+
             <div className={s.textarea}>
                 <div className={s.name}>
                     {props.name}
