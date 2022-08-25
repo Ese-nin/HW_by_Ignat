@@ -20,10 +20,7 @@ const defaultAffairs: Array<AffairType> = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): any => { // need to fix any
-    if (filter === 'all') {
-        return affairs
-    }
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => { // need to fix any
     if (filter === 'low') {
         return affairs.filter(a => a.priority === "low")
     }
@@ -33,10 +30,9 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): a
     if (filter === 'high') {
         return affairs.filter(a => a.priority === "high")
     }
-
-
+    return affairs
 }
-export const deleteAffair = (affairs: Array<AffairType>, _id: number): any => { // need to fix any
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // need to fix any
     return affairs.filter(a => a._id !== _id)
 }
 
