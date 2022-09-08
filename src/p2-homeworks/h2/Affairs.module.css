@@ -1,15 +1,16 @@
 .row {
-    width: 70px;
+    width: 100px;
+    text-align: center;
 }
 
-.table {
-    margin-left: 15px;
-}
-
-.table button {
-    background-color: darkcyan;
+.row button {
+    background-color: cadetblue;
     border-radius: 5px;
     border: 1px solid aquamarine;
+}
+
+.filterButtons {
+    margin-left: 50px;
 }
 
 .activeFilter {

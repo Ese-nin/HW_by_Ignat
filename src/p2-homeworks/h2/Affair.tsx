@@ -14,7 +14,7 @@ function Affair(props: AffairPropsType) {
     }// need to fix
 
     return (
-            <table className={s.table}>
+            <table>
                 <tr key={props.affair._id}>
                     <td className={s.row}> {props.affair.name}</td>
                     <td className={s.row}> {props.affair.priority}</td>
