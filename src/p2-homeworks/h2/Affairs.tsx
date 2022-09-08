@@ -1,10 +1,11 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from "./HW2";
-
+import s from "./Affairs.module.css"
 
 
 type AffairsPropsType = { // need to fix any
+    filter: FilterType
     data: Array<AffairType>
     setFilter: (value: FilterType) => void
     deleteAffairCallback: (_id: number) => void
@@ -34,14 +35,17 @@ function Affairs(props: AffairsPropsType) {
 
     return (
         <div>
+            <button className={props.filter === "all" ? s.activeFilter : ""} onClick={() => setAll("all")}>All</button>
+            <button className={props.filter === "high" ? s.activeFilter : ""} onClick={() => setHigh("high")}>High
+            </button>
+            <button className={props.filter === "middle" ? s.activeFilter : ""}
+                    onClick={() => setMiddle("middle")}>Middle
+            </button>
+            <button className={props.filter === "low" ? s.activeFilter : ""} onClick={() => setLow("low")}>Low</button>
 
             {mappedAffairs}
 
-            <button onClick={()=>setAll("all")}>All</button>
-            <button onClick={()=>setHigh("high")}>High</button>
-            <button onClick={()=>setMiddle("middle")}>Middle</button>
-            <button onClick={()=>setLow("low")}>Low</button>
-        </div>
+        </div> // переместил {mappedAffairs} вниз, чтобы меняющийся список не менял положение кнопок
     )
 }
 

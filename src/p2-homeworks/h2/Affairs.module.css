@@ -1,3 +1,18 @@
-.someClass {
+.row {
+    width: 70px;
+}
 
+.table {
+    margin-left: 15px;
+}
+
+.table button {
+    background-color: darkcyan;
+    border-radius: 5px;
+    border: 1px solid aquamarine;
+}
+
+.activeFilter {
+    background-color: aqua;
+    border: 1px solid grey;
 }
