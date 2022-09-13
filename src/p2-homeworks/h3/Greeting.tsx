@@ -1,5 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
+import {Button} from "./Button";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -19,7 +20,11 @@ const Greeting: React.FC<GreetingPropsType> = (
     return (
         <div>
             <input value={name} onKeyDown={pressEnter} onChange={setNameCallback} className={inputClass}/>
-            <button onClick={() => addUser(name)}>add</button>
+            <Button
+                onClick={() => addUser(name)}
+                error={error}>
+                add
+            </Button>
             <span>{totalUsers}</span>
             {error && <div className={s.errorMessage}>{error}</div>}
         </div>
