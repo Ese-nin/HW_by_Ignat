@@ -1,0 +1,40 @@
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: cadetblue;
+    padding: 0 15px;
+    width: 100px;
+    height: 70px;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+
+.header_active {
+    background-color: cadetblue;
+    padding: 0 15px;
+    width: 100px;
+    height: 70px;
+    transition: 1s;
+    transform: translateX(0%);
+}
+
+.item {
+
+}
+
+.link {
+    font-family: "Bell MT";
+    color: white;
+}
+
+.label {
+    background-color: cadetblue;
+    position: absolute;
+    right: -30px;
+    width: 30px;
+    height: 70px;
+    border-radius: 0 50% 50% 0;
+}
