@@ -10,9 +10,9 @@ export type messageDataPropsType = {
 
 const messageData = {
     avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    name: 'Some Name',
-    message: 'some text',
-    time: '22:00',
+    name: 'James Bond',
+    message: "I'm is agent 007",
+    time: '07:07',
 }
 
 function HW1() {
