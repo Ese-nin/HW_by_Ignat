@@ -11,11 +11,14 @@ function Header() {
     }
 
     return (
-        <div  className={s.wrapper}>
+        <div className={s.wrapper}>
             {/*add NavLinks*/}
 
-            <div className={hide ? s.header : s.header_active}>
-                <a onClick={onClickHandler} className={s.label}></a>
+            <div className={hide ? s.header_hide : s.header_active}>
+                <a onClick={onClickHandler} className={s.label}>
+                    <img height="40px" width="30px"
+                         src="https://belspecexport.by/assets/images/icons/footer_icon_1.png"/>
+                </a>
                 <div className={s.item}>
                     <NavLink className={s.link} to={'/pre-junior'}>PreJunior</NavLink>
                 </div>

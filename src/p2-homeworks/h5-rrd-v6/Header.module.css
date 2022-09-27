@@ -3,7 +3,7 @@
     overflow-x: hidden;
 }
 
-.header {
+.header_hide {
     background-color: cadetblue;
     padding: 0 15px;
     width: 100px;
@@ -31,10 +31,14 @@
 }
 
 .label {
-    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #75c3c5;
     position: absolute;
     right: -30px;
     width: 30px;
     height: 70px;
     border-radius: 0 50% 50% 0;
 }
+
