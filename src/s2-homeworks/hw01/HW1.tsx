@@ -37,18 +37,18 @@ export const message0: MessageType = {
         name: 'James Bond',  // можно менять
     },
     message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
-        time: '22:00', // можно менять
+        text: 'Премногоуважаемый и премалодостопочтимый друг!', // можно менять
+        time: '07:07', // можно менять
     },
 }
 export const friendMessage0: MessageType = {
     id: 100,
     user: {
         avatar: avatar, // можно менять
-        name: 'Friend Name', // можно менять
+        name: 'Michael Mitchel', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
+        text: 'Замечена повышенная сутулая производительность', // можно менять
         time: '22:00', // можно менять
     },
 }
