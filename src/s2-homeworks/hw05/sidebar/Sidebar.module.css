@@ -1,0 +1,30 @@
+.sidebar {
+}
+
+.sidebar.open {
+}
+
+.background {
+}
+
+.nav {
+}
+
+.nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav a:hover {
+    color: #00cc22;
+}
+
+.nav a.active {
+    color: #cc0000;
+}
+
+.close {
+}
+
+.close img {
+}
