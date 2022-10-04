@@ -2,34 +2,78 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .error {
+    color: red;
 }
 
 .input {
+    min-width: 372px;
+    height: 36px;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
 }
 
 .input:focus {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    outline: none;
 }
 
 .errorInput {
+    min-width: 372px;
+    height: 36px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: #cc0000 solid 1px;
 }
 
 .button {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 24px;
+    gap: 10px;
+
+    width: 78px;
+    height: 36px;
+    background: #0066CC;
+    border-radius: 3px;
+    border: 1px solid #D1D1D1;
 }
 
 .button:focus {
+
 }
 
 .button:active {
+    background: #0066CC;
+    border-radius: 3px;
+    outline: none;
 }
 
 .button:disabled {
+    background: #0066CC;
+    opacity: 0.5;
+    border-radius: 3px;
 }
 
 .text {
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .greeting {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 10px;
 }
