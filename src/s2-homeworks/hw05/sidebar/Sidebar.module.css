@@ -1,29 +1,59 @@
+.wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    height: 100%;
+}
+
 .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    transition: .5s;
+    transform: translateX(-100%);
+    background-color: #FFFFFF;
 }
 
 .sidebar.open {
+    transform: translateX(0%);
+
 }
 
 .background {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+
 }
 
 .nav a {
     text-decoration: none;
-    color: #FFFFFF;
+    font-weight: bold;
+    color: black;
 }
 
 .nav a:hover {
-    color: #00cc22;
+    color: #58ACFF;
 }
 
 .nav a.active {
-    color: #cc0000;
+    color: #0059B2;
 }
 
 .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background-color: #FFFFFF;
 }
 
 .close img {
