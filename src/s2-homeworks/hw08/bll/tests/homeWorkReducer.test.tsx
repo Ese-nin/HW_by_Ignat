@@ -38,8 +38,23 @@ test('check age 18', () => {
     })
 
     expect(newState.length).toBe(4)
-    expect(newState[0].age).toBe(40)
-    expect(newState[1].age).toBe(44)
-    expect(newState[2].age).toBe(55)
-    expect(newState[3].age).toBe(66)
+    expect(newState[3].age).toBe(40)
+    expect(newState[2].age).toBe(44)
+    expect(newState[1].age).toBe(55)
+    expect(newState[0].age).toBe(66)
+})
+
+
+test('check age 15', () => {
+    const endState = homeWorkReducer(initialState, {
+        type: 'check',
+        payload: 15,
+    })
+
+    expect(endState.length).toBe(5);
+    expect(endState[4].age).toBe(16)
+    expect(endState[3].age).toBe(40)
+    expect(endState[2].age).toBe(44)
+    expect(endState[1].age).toBe(55)
+    expect(endState[0].age).toBe(66)
 })
