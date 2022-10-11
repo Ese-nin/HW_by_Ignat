@@ -1,0 +1,35 @@
+.item {
+
+}
+
+.item:last-of-type {
+}
+
+.users {
+    width: 600px;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thead {
+    background-color: #E5E5E5;
+
+}
+
+.nameCol {
+    width: 50%;
+}
+
+.ageCol {
+    width: 50%;
+}
