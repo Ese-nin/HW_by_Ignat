@@ -22,3 +22,13 @@ html {
     min-height: 35px;
     border-radius: 5px;
 }
+
+.blueSelectTheme {
+    color: #000000;
+    background: #DDEEFF;
+}
+
+.darkSelectTheme {
+    color: #FFFFFF;
+    background: #212A34;
+}

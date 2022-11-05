@@ -33,6 +33,10 @@ const HW12 = () => {
         document.documentElement.dataset.theme = themeId + ''
     }, [themeId])
 
+    let finalSelectClassName = s.select
+        + (themeId === 2 ? ' ' + s.blueSelectTheme : '')
+        + (themeId === 3 ? ' ' + s.darkSelectTheme : '')
+
     return (
         <div id={'hw12'}>
             <div id={'hw12-text'} className={s2.hwTitle}>
@@ -43,7 +47,7 @@ const HW12 = () => {
                 Choose your theme
                 <SuperSelect
                     id={'hw12-select-theme'}
-                    className={s.select}
+                    className={finalSelectClassName}
                     // сделать переключение тем
                     options={themes}
                     onChangeOption={change}
