@@ -25,8 +25,8 @@ const HW12 = () => {
     console.log(themeId)
     const dispatch = useDispatch()
 
-    const change = (id: number) => { // дописать функцию
-        dispatch(changeThemeId(id))
+    const change = (id: string) => { // дописать функцию
+        dispatch(changeThemeId(+id))
     }
 
     useEffect(() => {
