@@ -44,3 +44,12 @@
 .time {
 
 }
+
+.triangleBottomRight {
+    z-index: 10;
+    align-self: self-end;
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #F5F7FB;
+    border-left: 15px solid transparent;
+}

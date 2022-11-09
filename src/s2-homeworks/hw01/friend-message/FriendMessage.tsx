@@ -18,8 +18,10 @@ const FriendMessage = (props: FriendMessagePropsType) => {
                     id={'hw1-friend-avatar-' + props.message.id}
                     // создаёт студент
                     src={props.message.user.avatar}
+                    alt={''}
                     //
                 />
+                <div className={s.triangleBottomLeft}></div>
                 <div className={s.friendText}>
                     <div
                         id={'hw1-friend-name-' + props.message.id}
