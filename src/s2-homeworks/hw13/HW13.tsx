@@ -15,7 +15,6 @@ import errorUnknown from './images/error.svg'
 * */
 
 const HW13 = () => {
-    const [disable, setDisable] = useState(false)
     const [code, setCode] = useState('')
     const [text, setText] = useState('')
     const [info, setInfo] = useState('')
@@ -27,7 +26,6 @@ const HW13 = () => {
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
                 : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
 
-        setDisable(true)
         setCode('')
         setImage('')
         setText('')
@@ -63,9 +61,6 @@ const HW13 = () => {
                     }
                 }
             )
-            .finally(() => {
-                setDisable(false)
-            })
     }
 
     return (
@@ -79,7 +74,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-                        disabled={disable}
+                        disabled={info === '...loading'}
                     >
                         Send true
                     </SuperButton>
@@ -88,7 +83,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-                        disabled={disable}
+                        disabled={info === '...loading'}
                     >
                         Send false
                     </SuperButton>
@@ -97,7 +92,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-                        disabled={disable}
+                        disabled={info === '...loading'}
                     >
                         Send undefined
                     </SuperButton>
@@ -106,7 +101,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-                        disabled={disable}
+                        disabled={info === '...loading'}
                     >
                         Send null
                     </SuperButton>
