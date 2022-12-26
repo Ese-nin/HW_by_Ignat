@@ -38,7 +38,7 @@ const HW15 = () => {
     const [count, setCount] = useState(4)
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams, setSearchParams]: [URLSearchParams, Function] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
     const sendQuery = (params: any) => {
@@ -61,10 +61,10 @@ const HW15 = () => {
         setPage(newPage)
         setCount(newCount)
 
-        sendQuery({page: newPage, count: newCount})
+        const params = {page: newPage, count: newCount}
+        sendQuery(params)
 
-        // @ts-ignore
-        setSearchParams({page: newPage, count: newCount}) // ???
+        setSearchParams(params)
 
         //
     }
@@ -75,10 +75,10 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page: 1, count: count})
+        const params = {page: 1, count: count}
+        sendQuery(params)
 
-        // @ts-ignore
-        setSearchParams({page: 1, count})
+        setSearchParams(params)
 
         //
     }
@@ -107,7 +107,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loader}></div>}
 
                 <SuperPagination
                     page={page}
