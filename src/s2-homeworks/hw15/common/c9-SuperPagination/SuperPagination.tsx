@@ -40,6 +40,9 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 onChange={onChangeCallback}
                 hideNextButton
                 hidePrevButton
+                variant='text'
+                shape='rounded'
+                color='primary'
             />
 
             <span className={s.text1}>
