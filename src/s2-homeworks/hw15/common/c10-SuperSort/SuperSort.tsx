@@ -25,7 +25,7 @@ export const pureChange = (sort: string, down: string, up: string) => {
         temp = up
     } else if (sort === up) {
         return temp
-    } else if (sort !== down && sort !== up) {
+    } else if (sort > down && sort > up) {
         temp = down
     }
     return temp

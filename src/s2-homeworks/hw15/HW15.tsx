@@ -90,7 +90,19 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [searchParams])
 
-    const mappedTechs = techs.map(t => (
+
+    let sortedTechs = techs;
+    if (sort === '1tech') {
+        sortedTechs = techs.sort((a, b) => a.tech.localeCompare(b.tech))
+    } else if (sort === '0tech') {
+        sortedTechs = techs.sort((a, b) => b.tech.localeCompare(a.tech))
+    } else if (sort === '1developer') {
+        sortedTechs = techs.sort((a, b) => a.developer.localeCompare(b.developer))
+    } else if (sort === '0developer') {
+        sortedTechs = techs.sort((a, b) => b.developer.localeCompare(a.developer))
+    }
+
+    const mappedTechs = sortedTechs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
