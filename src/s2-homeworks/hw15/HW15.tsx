@@ -21,7 +21,13 @@ type TechType = {
     developer: string
 }
 
-const getTechs = (params: { page: number, count: number }) => {
+type ParamsType = {
+    sort: string
+    page: number
+    count: number
+}
+
+const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
             'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
@@ -75,7 +81,7 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        const params = {page: 1, count: count}
+        const params = {sort: newSort, page: 1, count: count}
         sendQuery(params)
 
         setSearchParams(params)
@@ -88,27 +94,9 @@ const HW15 = () => {
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
-    }, [searchParams])
+    }, [])
 
-
-    let sortedTechs = techs;
-    if (sort === '1tech') {
-        // sortedTechs = techs.sort((a, b) => a.tech.localeCompare(b.tech))
-        sortedTechs = techs.sort((a, b) => a.id - b.id)
-    } else if (sort === '0tech') {
-        // sortedTechs = techs.sort((a, b) => b.tech.localeCompare(a.tech))
-        sortedTechs = techs.sort((a, b) => b.id - a.id)
-    } else if (sort === '1developer') {
-        // sortedTechs = techs.sort((a, b) => a.developer.localeCompare(b.developer))
-        sortedTechs = techs.sort((a, b) => a.id - b.id)
-    } else if (sort === '0developer') {
-        // sortedTechs = techs.sort((a, b) => b.developer.localeCompare(a.developer))
-        sortedTechs = techs.sort((a, b) => b.id - a.id)
-    } else if (sort === '') {
-        sortedTechs = techs
-    }
-
-    const mappedTechs = sortedTechs.map(t => (
+    const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
